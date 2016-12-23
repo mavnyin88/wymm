@@ -28,11 +28,15 @@
 			bottom:20px;
 			left:20px;
 		}
+		audio{
+			background-color: red;
+		}
 	</style>
 	<script src="jquery-3.1.1.min.js"></script>
 	<script>
 	$( document ).ready(function() {
 		var audiotime = document.getElementById('audio');
+
 		audio.addEventListener('timeupdate',function(){
     	var currentTimeMs = Math.floor(audio.currentTime);
 
@@ -52,7 +56,7 @@
 		else if (currentTimeMs == 10 ){
 			document.getElementById("content").innerHTML = "So quickly";
 		}
-		else if (currentTimeMs == 13 ){
+		else if (currentTimeMs == 12 ){
 			document.getElementById("content").innerHTML = "and here comes the words";
 		}
 		else if (currentTimeMs == 15 ){
