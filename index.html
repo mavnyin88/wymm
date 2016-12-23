@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery3</title>
+	<style>
+		body{
+			margin:0;
+			background-color: #191919;
+		}
+		.container{
+    		position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    -moz-transform: translateX(-50%) translateY(-50%);
+		    -webkit-transform: translateX(-50%) translateY(-50%);
+		    transform: translateX(-50%) translateY(-50%);
+		}
+		#content{
+			font-size:75px;
+			text-align:center;
+			color:red;
+		}
+		.player-pos{
+			position:absolute;
+			bottom:20px;
+			left:20px;
+		}
+	</style>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+		var audiotime = document.getElementById('audio');
+		audio.addEventListener('timeupdate',function(){
+    	var currentTimeMs = Math.floor(audio.currentTime);
+
+    	// console.log(currentTimeMs);
+    	if(currentTimeMs == 1){
+			document.getElementById("content").innerHTML = "All day";
+		}
+		else if (currentTimeMs == 3 ){
+			document.getElementById("content").innerHTML = "Did you lose yourself wondering";
+		}
+		else if (currentTimeMs == 6 ){
+			document.getElementById("content").innerHTML = "How we";
+		}
+		else if (currentTimeMs == 8 ){
+			document.getElementById("content").innerHTML = "Got to the surface";
+		}
+		else if (currentTimeMs == 10 ){
+			document.getElementById("content").innerHTML = "So quickly";
+		}
+		else if (currentTimeMs == 13 ){
+			document.getElementById("content").innerHTML = "and here comes the words";
+		}
+		else if (currentTimeMs == 15 ){
+			document.getElementById("content").innerHTML = "Will you marry me?";
+		}
+
+		},false);
+	});
+	</script>
+</head>
+<body>
+	
+	<div class="container">
+			<span id="content">
+			
+			</span>
+	</div>
+
+	<audio class="player-pos" id="audio" src="willYouMarryMe.mp3" controls>
+	</audio>
+
+	
+</body>
+</html>
